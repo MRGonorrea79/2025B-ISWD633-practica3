@@ -20,18 +20,22 @@ docker run -d --name <nombre contenedor> --mount type=bind,source=<ruta carpeta 
 
 ### ¿Qué sucede al ingresar al servidor de nginx?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+Se presenta el error 403 debido a que no existe el fichero index en la carpeta html
 
 ### ¿Qué pasa con el archivo index.html del contenedor?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+Al hacer el bind,los ficheros del contenedor se sobreescriben con los ficheros del host(los de la carpeta HTML) y como no hat nada en la carpeta el fichero index es eliminado.
 
 ### Ir a https://html5up.net/ y descargar un template gratuito, descomprirlo dentro de tu computador en la carpeta html
 ### ¿Qué sucede al ingresar al servidor de nginx?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+Ahora se puede visualizar el servidor web dado por el fichero index.html dentro del template descomprimido
 
 ### Eliminar el contenedor
 # COMPLETAR CON EL COMANDO
+docker rm -f mi-nginx
 
 ### ¿Qué sucede al crear nuevamente un contenedor montado al directorio definidos anteriormente?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+El contenido persiste porque el bind mount apunta al mismo directorio del host, incluso si se elimina o se recrea el contenedor.
 
 
