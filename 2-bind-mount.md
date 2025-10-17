@@ -17,6 +17,7 @@ docker run -d --name <nombre contenedor> --mount type=bind,source=<ruta carpeta 
 ### Crear un contenedor con la imagen nginx:alpine, mapear todos por puertos, para la ruta carpeta host colocar el directorio en donde se encuentra la carpeta html en tu computador y para la ruta carpeta contenedor: /usr/share/nginx/html (esta ruta se obtiene al revisar la documentación de la imagen)
 ![Volúmenes](volumen-host.PNG)
 # COMPLETAR CON EL COMANDO
+docker run -d --name contenedorSQL -p 80:80 --mount type=bind,source=/ruta/completa/a/nginx/html,target=/usr/share/nginx/html nginx:alpine
 
 ### ¿Qué sucede al ingresar al servidor de nginx?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
